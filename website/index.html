@@ -1,187 +1,489 @@
 <!DOCTYPE html>
-<html>
-<head>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Stocks 'n Stuff</title>
+
+    <meta name="description" content="Source code generated using layoutit.com"/>
+    <meta name="author" content="LayoutIt!"/>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet">
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+      google.charts.load('current', {'packages': ['corechart']});
+
+      function drawChart(array) {
+        // Define the chart to be drawn.
+        var data = google.visualization.arrayToDataTable(array);
+
+      	var options = {
+      	  title: 'Previous Closing Values',
+      	  hAxis: {title: 'Date', titleTextStyle:{color: '#333'}},
+      	  vAxis: {minValue: 0}
+      	};
+
+        // Instantiate and draw the chart.
+        var chart = new google.visualization.ColumnChart(document.getElementById('stockChart'));
+        chart.draw(data, options);
+      }
+      function drawChart_default() {
+      // Define the chart to be drawn.
+      var data = google.visualization.arrayToDataTable([
+      ['Date', 'Open', 'High', 'Low', 'Close'],
+      ['2013', 1000, 400, 100, 250],
+      ['2014', 1170, 460, 200, 350],
+      ['2015', 660, 1120, 400, 410],
+      ['2016', 1030, 540, 200, 320]
+      ]);
+
+      var options = {
+      title: 'Previous Closing Values',
+      hAxis: {title: 'Year', titleTextStyle:{color: '#333'}},
+      vAxis: {minValue: 0}
+      };
+
+      // Instantiate and draw the chart.
+      var chart = new google.visualization.ColumnChart(document.getElementById('stockChart'));
+      chart.draw(data, options);
+      }
+    </script>
+
+
+
+  </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
 <style>
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+p.newyork{
+  //border: 1px solid black;
+  margin: 0px;
+  padding: 0px;
+  line-height: 95%;
+  color: black;
+  font-size:25px; 
+  font
+}
+p.stocks{
+  //border: 1px solid black;
+  margin: 0px;
+  padding: 0px;
+  line-height: 95%;
+  color: black;
+  font-size: 20px; 
+  font
 }
 
-li {
-    float: left;
-}
-
-li a, .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
-
-li.dropdown {
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 </style>
-</head>
-<body>
 
-<ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+
+<body onload = "loadFunction(); drawChart_default()" background = "images/test-grey.jpg">
+
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" style = "background-image: url('images/background.jpg'); width: 100%; height: 100%;">
+      <h1 class="text-center" style="color: black; font-size: 90px;">
+        Stock 'n Stuff
+      </h1>
     </div>
-  </li>
-</ul>
+  </div>
 
-<h3>Dropdown Menu inside a Navigation Bar</h3>
-<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        
+        <a class="navbar-brand" href="#">Stock n' Stuff</a>
+      </div>
 
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="website.html">Home</a>
+          </li>
+          <li>
+            <a href="aboutPage.html">About</a>
+          </li>      
+        </ul>
+        
+        <ul class="nav navbar-nav navbar-right">
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input id = "search_area2" type="text" class="form-control" placeholder="Enter Company Name..." >
+            </div>
+            <button type="button" class="btn btn-default" onclick = "getSearch();stockSearch()">Submit</button>
+          </form>
 
-<div class="row">
-		<div class="col-md-2">
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 
-			<textarea id = "search_area" rows = "1" cols = "30">Enter Company Here...</textarea>
-
-			<div class="btn-group">
-				 
-				<button class="btn btn-default">
-					New York Times
-				</button> 
-				<button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
-					<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu">
-					<li>
-						<a href="#">Wall Street Journal</a>
-					</li>
-					<li class="disabled">ifin
-						<a href="#">Another action</a>
-					</li>
-					<li class="divider">
-					</li>
-					<li>
-						<a href="#">Something else here</a>
-					</li>
-				</ul>
-			</div>
-
-			<div class="btn-group">
-				 
-				<button class="btn btn-default">
-					Twitter
-				</button> 
-				<button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
-					<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu">
-					<li>
-						<a href="#">Facebook</a>
-					</li>
-					<li class="disabled">
-						<a href="#">Another action</a>
-					</li>
-					<li class="divider">
-					</li>
-					<li>
-						<a href="#">Something else here</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="col-md-2">
-
-			<button type="button" class="btn btn-default" onclick = "getSearch()">
-				Search
-			</button>
-			<button type = "button" onclick = "getSearch()" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-
-		</div>
-		<div class="col-md-8">
-			<h3 class="text-center" style="color: black">
-				Finance
-			</h3>
-			<div  style="border: 2px solid black">
-				<img src="../documentation/finance_example.png" alt="Mountain View" style="width:100% ;height:25%;">
-				<p>
-				
-				</p>
-			</div>
-			
-		</div>
+  <div class="row">
+ 
+    <div class="col-md-12">
+      <h2 class="text-center" style="color: black" id = "stockname">
+        Finance
+      </h2>
+      <div  style="border-style: solid solid hidden solid; width: 100%; height: 100% ">
+       <div class="row">
+    		<div class="col-md-4">
+    			<table class="table table-striped table-hover" style="background-color: white">
+    				<thead>
+    					<tr>
+    						<th>
+    							Type
+    						</th>
+    						<th>
+    							Value
+    						</th>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<tr class = "primary">
+    						<td>
+    							Open
+    						</td>
+    						<td id = "open">
+    							0
+    						</td>
+    					</tr>
+    					<tr class="danger">
+    						<td>
+    							High
+    						</td>
+    						<td id = "high">
+    							0
+    						</td>
+    					</tr>
+    					<tr class="warning">
+    						<td>
+    							Low
+    						</td>
+    						<td id = "low">
+    							0
+    						</td>
+    					</tr>
+    					<tr class="success">
+    						<td>
+    							Close
+    						</td>
+    						<td id = "close">
+    							0
+    						</td>
+    					</tr>
+    					<!-- <tr class="danger">
+    						<td>
+    							Ex-Dividend
+    						</td>
+    						<td id = "ex-dividend">
+    							0
+    						</td>
+    					</tr> -->
+    				</tbody>
+    			</table>
+    		</div>
+    		<div class = "col-md-8">
+    			<div id="stockChart" style="width: 100%; height: 100%;"></div>
+    		</div>
 	</div>
-	<div class="row">
-		<div class="col-md-6" id = "news_div2">
-			<h3 class="text-center" style="color: black">
-				News
-			</h3>
-			<div  style="border: 2px solid black; overflow: scroll; width: 100%; height: 500px " id = "news_div_add">
-				<p>
-				
-				</p>
-			</div>
-		</div>
-		<div class="col-md-6" >
-			<div>
-			<h3 class="text-center" style="color: black">
-				Social Media
-			</h3>
-			</div>
-			<div  style="border: 2px solid black; overflow: scroll; width: 100%; height: 500px" >
-				<img src="../documentation/twitter_example.png" alt="Mountain View" style="width:100% ;height:100%;">
-				<img src="../documentation/twitter_example.png" alt="Mountain View" style="width:100% ;height:100%;">
-				<img src="../documentation/twitter_example.png" alt="Mountain View" style="width:100% ;height:100%;">
+      
+      </div>
 
-				<p>
-				
-				</p>
-			</div>
-		</div>
-	</div>
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6" id = "news_div2">
+      <h2 class="text-center" style="color: black">
+        News
+      </h2>
+      <div  style="border: 2px solid black; overflow: scroll; width: 100%; height: 500px; background-color: white " id = "news_div_add">
+        <p>
+        
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6" >
+      <div>
+      <h2 class="text-center" style="color: black">
+        Social Media
+       </h2>
 
+      </div>
+      <div  id= "social_div_add" style= "float:left; width: 50%">
+		    <a class="twitter-timeline" data-height= "500px" data-width= "100%" data-widget-id="857669584266162176" data-screen-name= "google">Tweets by @Google</a>
+      </div>
+      <div style= "margin-left: 60%; height: 500px; width: 50%">
+		      <a id= "twitter" href="https://twitter.com/hashtag/google" target= "_blank"><img src= "images/twitter-hashtag.png" style="height:50%;"/></a>
+		      <a id= "facebook" href="https://www.facebook.com/search/top/?q=google" target="_blank"><img src= "images/facebook-logo.png" style="height:50%;"/></a>
+      </div>
 
-
-
-
+    </div>
+  </div>
+</div>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/scripts.js"></script>
+
+
+
+
+<script type="text/javascript">
+  function getSearch(){
+    var company_name = document.getElementById("search_area2").value;
+    //alert(company_name);
+	
+	var handle_name = company_name.replace(" ","");
+	$('#social_div_add').html('<a class="twitter-timeline" style="float:left" data-height= "500px" data-width= "100%" data-widget-id="857669584266162176" data-screen-name="'+handle_name+'">Tweets by @'+handle_name+'</a>');
+	//document.getElementById("social_div_add").style = "float:left; width:50%";
+	twttr.widgets.load();
+	var twitter_url = "https://twitter.com/hashtag/" + company_name.trim();
+	var facebook_url = "https://facebook.com/search/top/?q=" + company_name.trim();
+	document.getElementById("twitter").href = twitter_url;
+	document.getElementById("facebook").href = facebook_url;
+
+  var d = new Date();
+      d.setDate(d.getDate()-5); 
+      var year = d.getFullYear();
+      var month = d.getMonth();
+      var day = d.getDate();  
+      if(month + 1 < 10){
+        month = "0" + (month + 1).toString();
+      }
+      else{
+        month = (month + 1).toString();
+      }
+      if(day < 10){
+        day = "0" + day.toString();
+      }
+      else{
+        day = day.toString();
+      }
+      var bd = year + month + day;
+
+    var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    url += '?' + $.param({
+    'api-key': "95ee764070ef4d73917320f4000c799e",
+      'q': company_name, //possibly add quotes around variable
+      'begin_date' : bd //same
+    });
+    var info_Json = $.ajax({
+      datatype: 'application/json',
+      url: url,
+      method: 'GET',
+    });
+
+
+
+    info_Json.done(function(result){
+      $('#news_div_add').empty();
+      for(i = 0; i < result.response.docs.length; i++){
+        $('#news_div_add').append('<p class = "newyork">'
+          + '<a href = ' + JSON.stringify(result.response.docs[i].web_url) + ' target="_blank">'
+          + JSON.stringify(result.response.docs[i].headline.main)
+          + ',<small> '
+          + JSON.stringify(result.response.docs[i].byline.original) 
+          + '</small></a><br>' + JSON.stringify(result.response.docs[i].lead_paragraph) + '</p><br line-height = "1px">')
+      }
+    })
+  }
+</script>
+
+<script>
+function chartValues(company_tag) {
+  var d = new Date();
+      d.setDate(d.getDate()-5); 
+      var year = d.getFullYear();
+      var month = d.getMonth();
+      var day = d.getDate();  
+      if(month + 1 < 10){
+        month = "0" + (month + 1).toString();
+      }
+      else{
+        month = (month + 1).toString();
+      }
+      if(day < 10){
+        day = "0" + day.toString();
+      }
+      else{
+        day = day.toString();
+      }
+      var bd = year + "-" + month +"-"+ day;
+
+  var url = "https://www.quandl.com/api/v3/datasets/WIKI/"+company_tag+".json?limit=5&start_date=" + bd;
+  url += $.param({
+       'api_key': "h4TiiYqPZjHKuYk3bzo5",
+  });
+
+  var stock_Json = $.ajax({
+      datatype: 'application/json',
+      url: url,
+      method: 'GET',
+  });
+  
+
+  stock_Json.done(function(result){
+    var array = new Array(Number(result.dataset.data.length)+1);
+
+    for(var i = 0; i < array.length; ++i) {
+      array[i] = new Array(5); // Pair for date, value
+    }
+    array[0][0] = 'Date';
+    array[0][1] = 'Opening Value';
+    array[0][2] = 'High Value';
+    array[0][3] = 'Low Value';    
+    array[0][4] = 'Closing Value';
+
+    for(var i = 1; i < array.length; ++i) {
+       var date = JSON.stringify(result.dataset.data[i-1][0]);
+       var parseddate = date.match(/"(.*?)"/);
+       array[i][0] = parseddate[1];
+       array[i][1] = Number(result.dataset.data[i-1][1]);
+       array[i][2] = Number(result.dataset.data[i-1][2]);
+       array[i][3] = Number(result.dataset.data[i-1][3]);       
+       array[i][4] = Number(result.dataset.data[i-1][4]);
+    }
+    drawChart(array);
+  });
+}
+</script>
+
+
+
+<script>
+// Similar to above, but for stocks
+  function stockSearch() {
+
+    var company_name = document.getElementById("search_area2").value;
+    // Finds the stock data for the previous year
+    compurl = "https://crossorigin.me/http://d.yimg.com/autoc.finance.yahoo.com/autoc?query="+company_name+"&region=1&lang=en";
+    var tag;
+    var company_tag = $.ajax({
+        datatype: 'application/jsonp',
+        url: compurl,
+        method: 'GET',
+        async: false,
+     }).done(function(result) {
+        tag = JSON.stringify(result.ResultSet.Result[0].symbol);
+     }).fail(function(err){
+        //alert("failure");
+     }); 
+     
+    var parsedtag = tag.match(/"(.*?)"/);
+    //alert(parsedtag[1]);
+    var stockurl = "https://www.quandl.com/api/v3/datasets/WIKI/"+parsedtag[1]+".json?limit=1&";
+    stockurl += $.param({
+       'api_key': "h4TiiYqPZjHKuYk3bzo5",
+    });
+    //alert(stockurl);
+    var stock_Json = $.ajax({
+      datatype: 'application/json',
+      url: stockurl,
+      method: 'GET',
+    });
+
+// Date: 0
+// Open: 1
+// High: 2
+// Low: 3
+// Close: 4
+// Volume: 5
+// Ex-Dividend: 6
+// Split Ratio: 7
+// Adj. Open: 8
+// Adj. High: 9
+// Adj. Low: 10
+// Adj. Close: 11
+// Adj. Volume: 12
+
+
+    stock_Json.done(function(result){
+      //alert(company_name);
+      $('#stockname').empty();
+      $('#stockname').html(JSON.stringify(result.dataset.name)
+      + ' on '
+      + JSON.stringify(result.dataset.data[0][0]));
+
+      $('#open').empty();
+      $('#open').append('<p class = "stocks">'
+      + JSON.stringify(result.dataset.data[0][1]))
+      +'</p>';
+      $('#high').empty();
+      $('#high').append('<p class = "stocks">'
+      + JSON.stringify(result.dataset.data[0][2]))
+      +'</p>';
+      $('#low').empty();
+      $('#low').append('<p class = "stocks">'
+      + JSON.stringify(result.dataset.data[0][3]))
+      +'</p>';
+      $('#close').empty();
+      $('#close').append('<p class = "stocks">'
+      + JSON.stringify(result.dataset.data[0][4]))
+      +'</p>';
+      //alert(JSON.stringify(result.dataset.name));
+      chartValues(parsedtag[1]);
+// <p> string </p>
+
+  })
+
+}
+
+</script>
+
+<script type="text/javascript">
+  function search_input(ele) {
+      if(event.keyCode == 13) {
+          //alert(ele.value);
+          getSearch();
+	  stockSearch();
+          return false; 
+      }
+  }
+</script>
+
+<script type="text/javascript">
+  function loadFunction(){
+    var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    url += '?' + $.param({
+    'api-key': "95ee764070ef4d73917320f4000c799e",
+    'q': "economic", //possibly add quotes around variable
+    });
+
+    var info_Json = $.ajax({
+      datatype: 'application/json',
+      url: url,
+      method: 'GET',
+    });
+
+    
+
+    info_Json.done(function(result){
+      $('#news_div_add').empty();
+      for(i = 0; i < result.response.docs.length; i++){
+        $('#news_div_add').append('<p class = "newyork">'
+          + '<a href = ' + JSON.stringify(result.response.docs[i].web_url) + ' target="_blank">'
+          + JSON.stringify(result.response.docs[i].headline.main)
+          + ',<small> '
+          + JSON.stringify(result.response.docs[i].byline.original) 
+          + '</small></a><br>' + JSON.stringify(result.response.docs[i].lead_paragraph) + '</p><br line-height = "1px">')
+      }
+    })
+
+  }
+</script>
+
 </body>
+<footer>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</footer>
 </html>
