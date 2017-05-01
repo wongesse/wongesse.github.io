@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Stocks 'n Stuff</title>
+
+    <meta name="description" content="Source code generated using layoutit.com"/>
+    <meta name="author" content="LayoutIt!"/>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet">
+
+
+  </head>
+<style>
+p.newyork{
+  //border: 1px solid black;
+  margin: 0px;
+  padding: 0px;
+  line-height: 95%;
+  color: black;
+  font-size:25px; 
+  font
+}
+p.stocks{
+  //border: 1px solid black;
+  margin: 0px;
+  padding: 0px;
+  line-height: 95%;
+  color: black;
+  font-size: 20px; 
+  font
+}
+
+div.twitter{
+  /*max-width: 500px;*/
+  width: 49%;
+  margin: auto;
+  border: 2px solid black;  
+  float: right; 
+.titleHeader {
+  background-color: yellow;
+}
+
+}
+</style>
+
+
+<body onload = "loadFunction()" background = "test-grey.jpg">
+
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" style = "background-image: url('../documentation/background.jpg'); width: 100%; height: 100%;">
+      <h1 class="text-center" style="color: black; font-size: 90px;">
+        Stock 'n Stuff
+      </h1>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Brand</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+        <ul class="nav navbar-nav navbar-right">
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input id = "search_area2" type="text" class="form-control" placeholder="Enter Company Name..." >
+            </div>
+            <button type="button" class="btn btn-default" onclick = "getSearch();stockSearch()">Submit</button>
+          </form>
+
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="row">
+ 
+    <div class="col-md-12">
+      <h3 class="text-center" style="color: black" id = "stockname">
+        Finance
+      </h3>
+      <div  style="border: 2px solid black; width: 100%; height: 100px ">
+       <div class="row">
+		<div class="col-md-12">
+			<table class="table table-striped table-hover" style="background-color: white">
+				<thead>
+					<tr>
+						<th>
+							Type
+						</th>
+						<th>
+							Value
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							Open
+						</td>
+						<td id = "open">
+							0
+						</td>
+					</tr>
+					<tr class="active">
+						<td>
+							High
+						</td>
+						<td id = "high">
+							0
+						</td>
+					</tr>
+					<tr class="success">
+						<td>
+							Low
+						</td>
+						<td id = "low">
+							0
+						</td>
+					</tr>
+					<tr class="warning">
+						<td>
+							Close
+						</td>
+						<td id = "close">
+							0
+						</td>
+					</tr>
+					<tr class="danger">
+						<td>
+							Ex-Dividend
+						</td>
+						<td id = "ex-dividend">
+							0
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+      
+      </div>
+
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6" id = "news_div2">
+      <h3 class="text-center" style="color: black">
+        News
+      </h3>
+      <div  style="border: 2px solid black; overflow: scroll; width: 100%; height: 500px; background-color: white " id = "news_div_add">
+        <p>
+        
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6" >
+      <div>
+      <h3 class="text-center" style="color: black">
+        Social Media
+       </h3>
+
+      </div>
+      <div  id= "social_div_add" style= "float:left; width: 50%">
+		    <a class="twitter-timeline" data-height= "500px" data-width= "100%" data-widget-id="857669584266162176" data-screen-name= "google">Tweets by @Google</a>
+      </div>
+      <div style= "margin-left: 60%; height: 500px; width: 50%">
+		      <a id= "twitter" href="https://twitter.com/hashtag/google" target= "_blank"><img src= "twitter-hashtag.png" style="height:50%;"/></a>
+		      <a id= "facebook" href="https://www.facebook.com/search/top/?q=google" target="_blank"><img src= "facebook-logo.png" style="height:50%;"/></a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+
+
+
+
+<script type="text/javascript">
+  function getSearch(){
+    var company_name = document.getElementById("search_area2").value;
+    //alert(company_name);
+	
+	var handle_name = company_name.replace(" ","");
+	$('#social_div_add').html('<a class="twitter-timeline" style="float:left" data-height= "500px" data-width= "100%" data-widget-id="857669584266162176" data-screen-name="'+handle_name+'">Tweets by @'+handle_name+'</a>');
+	//document.getElementById("social_div_add").style = "float:left; width:50%";
+	twttr.widgets.load();
+	var twitter_url = "https://twitter.com/hashtag/" + company_name.trim();
+	var facebook_url = "https://facebook.com/search/top/?q=" + company_name.trim();
+	document.getElementById("twitter").href = twitter_url;
+	document.getElementById("facebook").href = facebook_url;
+
+  var d = new Date();
+      d.setDate(d.getDate()-5); 
+      console.log(d);
+      var year = d.getFullYear();
+      var month = d.getMonth();
+      var day = d.getDate();  
+      if(month + 1 < 10){
+        month = "0" + (month + 1).toString();
+      }
+      else{
+        month = (month + 1).toString();
+      }
+      if(day < 10){
+        day = "0" + day.toString();
+      }
+      else{
+        day = day.toString();
+      }
+      var bd = year + month + day;
+      console.log(bd);
+
+
+    var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    url += '?' + $.param({
+    'api-key': "95ee764070ef4d73917320f4000c799e",
+      'q': company_name, //possibly add quotes around variable
+      'begin_date' : bd //same
+    });
+    console.log(url);
+    var info_Json = $.ajax({
+      datatype: 'application/json',
+      url: url,
+      method: 'GET',
+      /*success: fun1()
+
+      }*/
+    });
+
+
+
+    info_Json.done(function(result){
+      $('#news_div_add').empty();
+      for(i = 0; i < result.response.docs.length; i++){
+        $('#news_div_add').append('<p class = "newyork">'
+          + '<a href = ' + JSON.stringify(result.response.docs[i].web_url) + ' target="_blank">'
+          + JSON.stringify(result.response.docs[i].headline.main)
+          + ',<small> '
+          + JSON.stringify(result.response.docs[i].byline.original) 
+          + '</small></a><br>' + JSON.stringify(result.response.docs[i].lead_paragraph) + '</p><br line-height = "1px">')
+      }
+    })
+  }
+</script>
+<script>
+// Similar to above, but for stocks
+  function stockSearch() {
+
+    var company_name = document.getElementById("search_area2").value;
+    // Finds the stock data for the previous year
+    compurl = "https://crossorigin.me/http://d.yimg.com/autoc.finance.yahoo.com/autoc?query="+company_name+"&region=1&lang=en";
+    var tag;
+    var company_tag = $.ajax({
+        datatype: 'application/jsonp',
+        url: compurl,
+        method: 'GET',
+        async: false,
+     }).done(function(result) {
+        console.log(JSON.stringify(result.ResultSet.Result[0].symbol));
+        tag = JSON.stringify(result.ResultSet.Result[0].symbol);
+     }).fail(function(err){
+        alert("failure");
+     }); 
+
+    /*var myInit = { method: 'GET',
+
+      datatype: 'application/jsonp',
+      mode: 'cors',
+      headers: {
+        "Accept": "application/jsonp"
+      }
+    };
+
+    var request = new Request(compurl, myInit);
+    var company_tag;
+    fetch(request).then(function(response){
+      response.json().then(function(json){
+        console.log(JSON.stringify(json.ResultSet.Result[0].symbol));
+        company_tag = JSON.stringify(json.ResultSet.Result[0].symbol);
+      });
+    });*/
+     
+    var parsedtag = tag.match(/"(.*?)"/);
+    //alert(parsedtag[1]);
+    var stockurl = "https://www.quandl.com/api/v3/datasets/WIKI/"+parsedtag[1]+".json?limit=1&";
+    stockurl += $.param({
+       'api_key': "h4TiiYqPZjHKuYk3bzo5",
+    });
+    //alert(stockurl);
+    var stock_Json = $.ajax({
+      datatype: 'application/json',
+      url: stockurl,
+      method: 'GET',
+    }).done(function(result) {
+      console.log(result)
+      //alert(JSON.stringify(result.dataset.dataset_code))
+    });
+
+// Date: 0
+// Open: 1
+// High: 2
+// Low: 3
+// Close: 4
+// Volume: 5
+// Ex-Dividend: 6
+// Split Ratio: 7
+// Adj. Open: 8
+// Adj. High: 9
+// Adj. Low: 10
+// Adj. Close: 11
+// Adj. Volume: 12
+
+
+    stock_Json.done(function(result){
+      //alert(company_name);
+      $('#stockname').empty();
+      $('#stockname').html(JSON.stringify(result.dataset.name)
+      + ' on '
+      + JSON.stringify(result.dataset.data[0][0]));
+
+      $('#open').empty();
+      $('#open').append('<p class = "stocks">'
+      + JSON.stringify(result.dataset.data[0][1]))
+      +'</p>';
+      $('#high').empty();
+      $('#high').append('<p class = "stocks">'
+      + JSON.stringify(result.dataset.data[0][2]))
+      +'</p>';
+      $('#low').empty();
+      $('#low').append('<p class = "stocks">'
+      + JSON.stringify(result.dataset.data[0][3]))
+      +'</p>';
+      $('#close').empty();
+      $('#close').append('<p class = "stocks">'
+      + JSON.stringify(result.dataset.data[0][4]))
+      +'</p>';
+      $('#ex-dividend').empty();
+      $('#ex-dividend').append('<p class = "stocks">'
+      + JSON.stringify(result.dataset.data[0][6]))
+      +'</p>';
+      //alert(JSON.stringify(result.dataset.name));
+
+// <p> string </p>
+
+  })
+
+}
+
+</script>
+
+<script type="text/javascript">
+  function search_input(ele) {
+      if(event.keyCode == 13) {
+          //alert(ele.value);
+          getSearch();
+	  stockSearch();
+          return false; 
+      }
+  }
+</script>
+
+<script type="text/javascript">
+  function loadFunction(){
+    var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    url += '?' + $.param({
+    'api-key': "95ee764070ef4d73917320f4000c799e",
+    'q': "economic", //possibly add quotes around variable
+    });
+
+    var info_Json = $.ajax({
+      datatype: 'application/json',
+      url: url,
+      method: 'GET',
+      /*success: fun1()
+
+      }*/
+    }).done(function(result) {
+      console.log(result)
+      //alert(JSON.stringify(result.response.docs[0].web_url))
+    }).fail(function(err) {
+      throw err;
+    
+
+    });
+
+    
+
+    info_Json.done(function(result){
+      $('#news_div_add').empty();
+      for(i = 0; i < result.response.docs.length; i++){
+        $('#news_div_add').append('<p class = "newyork">'
+          + '<a href = ' + JSON.stringify(result.response.docs[i].web_url) + ' target="_blank">'
+          + JSON.stringify(result.response.docs[i].headline.main)
+          + ',<small> '
+          + JSON.stringify(result.response.docs[i].byline.original) 
+          + '</small></a><br>' + JSON.stringify(result.response.docs[i].lead_paragraph) + '</p><br line-height = "1px">')
+      }
+    })
+
+  }
+</script>
+
+</body>
+<footer>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</footer>
+</html>

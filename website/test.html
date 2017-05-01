@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap 3, from LayoutIt!</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+      google.charts.load('current', {'packages': ['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        // Define the chart to be drawn.
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Open', 'High', 'Low', 'Close'],
+          ['2013',  1000,   400,    100,    250],
+          ['2014',  1170,   460,    200,    350],
+          ['2015',  660,    1120,    400,   410],
+          ['2016',  1030,   540,    200,    320]
+        ]);
+
+  var options = {
+    title: 'Previous Closing Values',
+    hAxis: {title: 'Year', titleTextStyle:{color: '#333'}},
+    vAxis: {minValue: 0}
+  };
+
+        // Instantiate and draw the chart.
+        var chart = new google.visualization.AreaChart(document.getElementById('stockChart'));
+        chart.draw(data, options);
+      }
+    </script>
+
+
+  </head>
+<style>
+p.newyork{
+  //border: 1px solid black;
+  margin: 0px;
+  padding: 0px;
+  line-height: 95%;
+  color: black;
+  font-size:25px; 
+  font
+}
+
+div.twitter{
+  /*max-width: 500px;*/
+  width: 49%;
+  margin: auto;
+  border: 2px solid black;  
+  float: right; 
+.titleHeader {
+  background-color: yellow;
+}
+</style>
+
+
+<body onload = "loadFunction()">
+
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" style = "background-image: url('../documentation/background.jpg'); width: 100%; height: 100%;">
+      <h1 class="text-center" style="color: black; font-size: 90px;">
+        Stock 'n Stuff
+      </h1>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+        <ul class="nav navbar-nav navbar-right">
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input id = "search_area2" type="text" class="form-control" placeholder="Enter Company Name..." >
+            </div>
+            <button type="button" class="btn btn-default" onclick = "getSearch()">Submit</button>
+          </form
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="text-center" style="color: black">
+        Finance
+      </h3>
+      <div  style="border: 2px solid black">
+      <div id="stockChart" style="width: 75%; height: 200px;"></div>
+        <!--<img src="../documentation/finance_example.png" alt="Mountain View" style="width:100% ;height:25%;">
+        <p>
+        
+        </p>-->
+      </div>
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6" id = "news_div2">
+      <h3 class="text-center" style="color: black">
+        News
+      </h3>
+      <div  style="border: 2px solid black; overflow: scroll; width: 100%; height: 500px " id = "news_div_add">
+        <p>
+        
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6" >
+      <div>
+      <h3 class="text-center" style="color: black">
+        Social Media
+      </h3>
+      </div>
+      <div  id= "social_div_add" style= "float:left">
+		<a class="twitter-timeline" data-height= "500px" data-width= "100%" data-widget-id="857669584266162176" data-screen-name= "google">Tweets by @Google</a>
+      </div>
+	  <div style= "margin-left: 50%; height: 500px">
+		<a id= "twitter" href="https://twitter.com/hashtag/google" target= "_blank"><img src= "../documentation/twitter-hashtag.png" style="height:50%;"/></a>
+		<a id= "facebook" href="https://www.facebook.com/search/top/?q=google" target="_blank"><img src= "../documentation/facebook-logo.png" style="height:50%;"/></a>
+	  </div>
+    </div>
+
+    <div class="col-md-2">
+
+      <button type="button" class="btn btn-default" onclick = "getSearch()">
+        Search
+      </button>
+      <button type = "button" onclick = "getSearch()" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+
+    </div> -->
+    <div class="col-md-12">
+      <h3 class="text-center" style="color: black">
+        Finance
+      </h3>
+      <div  style="border: 2px solid black">
+      <div id="stockChart" style="width: 75%; height: 200px;"></div>
+        <!--<img src="../documentation/finance_example.png" alt="Mountain View" style="width:100% ;height:25%;">
+        <p>
+        
+        </p>-->
+      </div>
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6" id = "news_div2">
+      <h3 class="text-center" style="color: black">
+        News
+      </h3>
+      <div  style="border: 2px solid black; overflow: scroll; width: 100%; height: 500px " id = "news_div_add">
+        <p>
+        
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6" >
+      <div>
+      <h3 class="text-center" style="color: black">
+        Social Media
+      </h3>
+      </div>
+      <div  style="border: 2px solid black; overflow: scroll; width: 100%; height: 500px" >
+        <img src="../documentation/twitter_example.png" alt="Mountain View" style="width:100% ;height:100%;">
+        <img src="../documentation/twitter_example.png" alt="Mountain View" style="width:100% ;height:100%;">
+        <img src="../documentation/twitter_example.png" alt="Mountain View" style="width:100% ;height:100%;">
+
+        <p>
+        
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<script type="text/javascript">
+  function getSearch(){
+    var company_name = document.getElementById("search_area2").value;
+    //alert(company_name);
+	
+  	var handle_name = company_name.replace(" ","");
+  	$('#social_div_add').html('<a class="twitter-timeline" style="float:left" data-height= "500px" data-width= "100%" data-widget-id="857669584266162176" data-screen-name="'+handle_name+'">Tweets by @'+handle_name+'</a>');
+  	document.getElementById("social_div_add").style = "float:left";
+  	twttr.widgets.load();
+  	var twitter_url = "https://twitter.com/hashtag/" + company_name.trim();
+  	var facebook_url = "https://facebook.com/search/top/?q=" + company_name.trim();
+  	document.getElementById("twitter").href = twitter_url;
+  	document.getElementById("facebook").href = facebook_url;
+    
+    var d = new Date();
+    var year = d.getFullYear();
+    var month = d.getMonth();
+    var day = d.getDate();
+    if(month + 1 < 10){
+      month = "0" + (month + 1).toString();
+    }
+    else{
+      month = (month + 1).toString();
+    }
+    if(day < 10){
+      day = "0" + day.toString();
+    }
+    else{
+      day = day.toString();
+    }
+    var bd = year + month + day;
+
+  var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+  url += '?' + $.param({
+  'api-key': "95ee764070ef4d73917320f4000c799e",
+    'q': company_name, //possibly add quotes around variable
+  //'begin_date' : bd //same
+  });
+
+  var info_Json = $.ajax({
+    datatype: 'application/json',
+    url: url,
+    method: 'GET',
+    /*success: fun1()
+
+    }*/
+  });
+
+  info_Json.done(function(result){
+    $('#news_div_add').empty();
+    for(i = 0; i < result.response.docs.length; i++){
+      $('#news_div_add').append('<p class = "newyork">'
+        + '<a href = ' + JSON.stringify(result.response.docs[i].web_url) + ' style = "color: black" target="_blank">'
+        + JSON.stringify(result.response.docs[i].headline.main)
+        + ',<small> '
+        + JSON.stringify(result.response.docs[i].byline.original) 
+        + '</small></a></p><br line-height = "1px">');
+      //$('.twitter').append(JSON.stringify(result.response.docs[i].headline.main)+'<br>');
+    }
+  })
+
+  
+  //info_Json.response.docs[1].source
+  //document.getElementById("test2").innerHTML = info_Json;//.response.docs[1].source;
+  }
+</script>
+
+<script type="text/javascript">
+  function search_input(ele) {
+      if(event.keyCode == 13) {
+          //alert(ele.value);
+          getSearch();       
+          return false; 
+      }
+  }
+</script>
+
+<script type="text/javascript">
+  function loadFunction(){
+    var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    url += '?' + $.param({
+    'api-key': "95ee764070ef4d73917320f4000c799e",
+    'q': "economic", //possibly add quotes around variable
+    });
+
+    var info_Json = $.ajax({
+      datatype: 'application/json',
+      url: url,
+      method: 'GET',
+      /*success: fun1()
+
+      }*/
+    }).done(function(result) {
+      console.log(result)
+      //alert(JSON.stringify(result.response.docs[0].web_url))
+    }).fail(function(err) {
+      throw err;
+    });
+
+    info_Json.done(function(result){
+      for(i = 0; i < result.response.docs.length; i++){
+        $('#news_div_add').append('<p class = "newyork">'
+          + '<a href = ' + JSON.stringify(result.response.docs[i].web_url) + ' style = "color: black" target="_blank">'
+          + JSON.stringify(result.response.docs[i].headline.main)
+          + ',<small> '
+          + JSON.stringify(result.response.docs[i].byline.original) 
+          + '</small></a></p><br line-height = "1px">');
+        //$('.twitter').append(JSON.stringify(result.response.docs[i].headline.main)+'<br>');
+      }
+    })  
+  }
+</script>
+
+</body>
+<footer>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</footer>
+</html>

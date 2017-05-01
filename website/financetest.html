@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap 3, from LayoutIt!</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+      google.charts.load('current', {'packages': ['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        // Define the chart to be drawn.
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Open', 'High', 'Low', 'Close'],
+          ['2013',  1000,   400,    100,    250],
+          ['2014',  1170,   460,    200,    350],
+          ['2015',  660,    1120,    400,   410],
+          ['2016',  1030,   540,    200,    320]
+        ]);
+
+	var options = {
+	  title: 'Previous Closing Values',
+	  hAxis: {title: 'Year', titleTextStyle:{color: '#333'}},
+	  vAxis: {minValue: 0}
+	};
+
+        // Instantiate and draw the chart.
+        var chart = new google.visualization.AreaChart(document.getElementById('stockChart'));
+        chart.draw(data, options);
+      }
+    </script>
+
+
+
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<style>
+p.newyork{
+	//border: 1px solid black;
+	margin: 0px;
+	padding: 0px;
+	line-height: 95%;
+	color: black;
+	font-size:25px; 
+	font
+}
+
+div.button_area{
+/*	max-width: 500px;
+*/	
+	width: 49%;
+	margin: left;
+}
+
+div.news{
+	/*max-width: 500px;
+	max-height: 500px;*/
+	width: 49%;
+	margin: auto;
+	border: 2px solid black;
+	float: left;
+}
+
+div.twitter{
+	/*max-width: 500px;*/
+	width: 49%;
+	margin: auto;
+	border: 2px solid black;	
+	float: right;	
+<!-->.titleHeader {
+	background-color: yellow;
+}
+
+}<-->
+</style>
+
+
+<body style="background-image: url('../documentation/background1.jpg'); width: 100%; height: 100%;" onload = "drawChart(); loadFunction()">
+	
+	<!-- <h1 style="text-align: center">Welcome to this weird test website</h1>
+	<hr style = "border-color: Black">
+	<div class = "button_area">
+		<textarea id = "search_area" rows = "1" cols = "30"></textarea>
+		<button type = "button" onclick = "getSearch()" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+	</div> -->
+
+	<!-- <div class = "news" id = "news_div">
+		<h1>Headlines from New York Times</h1>
+		<p id = "test1" class = "newyork"></p>
+		<p id = "test2" class = "newyork"></p>
+	</div> -->
+
+	<!-- <div class = "twitter">
+		<p>hello</p>
+	</div> -->
+
+<!-- -------------------------------------------- -->
+
+	<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12" style = "background-image: url('../documentation/background.jpg'); width: 100%; height: 100%;">
+			<h3 class="text-center" style="color: black;">
+				Stock 'n Stuff
+			</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2">
+			<textarea id = "search_area" rows = "1" cols = "30"></textarea>
+
+			<div class="btn-group">
+				 
+				<button class="btn btn-default">
+					New York Times
+				</button> 
+				<button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">Wall Street Journal</a>
+					</li>
+					<li class="disabled">
+						<a href="#">Another action</a>
+					</li>
+					<li class="divider">
+					</li>
+					<li>
+						<a href="#">Something else here</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="btn-group">
+				 
+				<button class="btn btn-default">
+					Twitter
+				</button> 
+				<button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">Facebook</a>
+					</li>
+					<li class="disabled">
+						<a href="#">Another action</a>
+					</li>
+					<li class="divider">
+					</li>
+					<li>
+						<a href="#">Something else here</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="col-md-2">
+
+			<button type="button" class="btn btn-default" onclick = "getSearch()">
+				Search
+			</button>
+			<button type = "button" onclick = "getSearch()" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+
+		</div>
+
+		
+
+
+		<div class="col-md-8">
+			<h3 class="text-center" style="color: black">
+				Finance
+			</h3>
+			<div  style="border: 2px solid black">
+
+			<div id="stockChart" style="width: 100%; height: 200px;"></div>
+				<!--><img src="../documentation/finance_example.png" alt="Mountain View" style="width:100% ;height:25%;">
+				<p>
+				
+				</p><!-->
+			</div>
+			
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6" id = "news_div2">
+			<h3 class="text-center" style="color: black">
+				News
+			</h3>
+			<div  style="border: 2px solid black; overflow: scroll; width: 100%; height: 500px " id = "news_div_add">
+				<p>
+				
+				</p>
+			</div>
+		</div>
+		<div class="col-md-6" >
+			<div>
+			<h3 class="text-center" style="color: black">
+				Social Media
+			</h3>
+			</div>
+			<div  style="border: 2px solid black; overflow: scroll; width: 100%; height: 500px" >
+				<img src="../documentation/twitter_example.PNG" alt="Mountain View" style="width:100% ;height:100%;">
+				<img src="../documentation/twitter_example.PNG" alt="Mountain View" style="width:100% ;height:100%;">
+				<img src="../documentation/twitter_example.PNG" alt="Mountain View" style="width:100% ;height:100%;">
+
+				<p>
+				
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="row">
+		<div class="col-md-4">
+			<h3 class="text-center">
+				News
+			</h3>
+			<p>
+				Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h3 class="text-center">
+				Social Media
+			</h3>
+			<p>
+				Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h3 class="text-center">
+				Finance
+			</h3>
+			<p>
+				Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+		</div>
+	</div> -->
+</div>
+
+
+
+
+<script type="text/javascript">
+	function getSearch(){
+		var company_name = document.getElementById("search_area").value;
+		var d = new Date();
+		var year = d.getFullYear();
+		var month = d.getMonth();
+		var day = d.getDate();
+		if(month + 1 < 10){
+			month = "0" + (month + 1).toString();
+		}
+		else{
+			month = (month + 1).toString();
+		}
+		if(day < 10){
+			day = "0" + day.toString();
+		}
+		else{
+			day = day.toString();
+		}
+		var bd = year + month + day;
+
+		//document.getElementById("test1").innerHTML = bd;
+
+
+	var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+	url += '?' + $.param({
+	'api-key': "95ee764070ef4d73917320f4000c799e",
+  	'q': company_name, //possibly add quotes around variable
+ 	//'begin_date' : bd //same
+	});
+
+	var info_Json = $.ajax({
+		datatype: 'application/json',
+		url: url,
+		method: 'GET',
+		/*success: fun1()
+
+		}*/
+	}).done(function(result) {
+		console.log(result)
+		//alert(JSON.stringify(result.response.docs[0].web_url))
+	}).fail(function(err) {
+		throw err;
+	});
+
+	info_Json.done(function(result){
+		$('#news_div_add').empty();
+		for(i = 0; i < result.response.docs.length; i++){
+			$('#news_div_add').append('<p class = "newyork">'
+				+ '<a href = ' + JSON.stringify(result.response.docs[i].web_url) + ' style = "color: black" target="_blank">'
+				+ JSON.stringify(result.response.docs[i].headline.main)
+				+ ',<small> '
+				+ JSON.stringify(result.response.docs[i].byline.original) 
+				+ '</small></a></p><br line-height = "1px">');
+			//$('.twitter').append(JSON.stringify(result.response.docs[i].headline.main)+'<br>');
+		}
+	})
+	//info_Json.response.docs[1].source
+	//document.getElementById("test2").innerHTML = info_Json;//.response.docs[1].source;
+	}
+</script>
+
+<script type="text/javascript">
+	function loadFunction(){
+		var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+		url += '?' + $.param({
+		'api-key': "95ee764070ef4d73917320f4000c799e",
+	  	'q': "economic", //possibly add quotes around variable
+		});
+
+		var info_Json = $.ajax({
+			datatype: 'application/json',
+			url: url,
+			method: 'GET',
+			/*success: fun1()
+
+			}*/
+		}).done(function(result) {
+			console.log(result)
+			//alert(JSON.stringify(result.response.docs[0].web_url))
+		}).fail(function(err) {
+			throw err;
+		});
+
+		info_Json.done(function(result){
+			for(i = 0; i < result.response.docs.length; i++){
+				$('#news_div_add').append('<p class = "newyork">'
+					+ '<a href = ' + JSON.stringify(result.response.docs[i].web_url) + ' style = "color: black" target="_blank">'
+					+ JSON.stringify(result.response.docs[i].headline.main)
+					+ ',<small> '
+					+ JSON.stringify(result.response.docs[i].byline.original) 
+					+ '</small></a></p><br line-height = "1px">');
+				//$('.twitter').append(JSON.stringify(result.response.docs[i].headline.main)+'<br>');
+			}
+		})	
+	}
+</script>
+<script>
+
+  function getCompanyName() {
+
+	url= "https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/secwiki_tickers.csv";
+	var info_CSV = $.ajax({
+		datatype: 'application/csv',
+		url: url,
+       		 method: "GET",
+		/*headers: {
+		'Access-Control-Allow-Origin': '*'
+		},*/
+	}).done(function(result) {
+			console.log(result)
+			//alert(JSON.stringify(result.response.docs[0].web_url))
+	});
+}
+       
+
+
+/*
+    var allTextLines = allText.split(/\r\n|\n/);
+    var headers = allTextLines[0].split(',');
+    var lines = [];
+
+    for (var i=1; i<allTextLines.length; i++) {
+        var data = allTextLines[i].split(',');
+        if (data.length == headers.length) {
+
+            var tarr = [];
+            for (var j=0; j<headers.length; j++) {
+                tarr.push(headers[j]+":"+data[j]);
+            }
+            lines.push(tarr);
+           }
+       }
+    // alert(lines);
+    }*/
+</script>
+
+
+</body>
+</html>

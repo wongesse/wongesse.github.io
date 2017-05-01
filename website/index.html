@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+</ul>
+
+<h3>Dropdown Menu inside a Navigation Bar</h3>
+<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+
+
+<div class="row">
+		<div class="col-md-2">
+
+			<textarea id = "search_area" rows = "1" cols = "30">Enter Company Here...</textarea>
+
+			<div class="btn-group">
+				 
+				<button class="btn btn-default">
+					New York Times
+				</button> 
+				<button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">Wall Street Journal</a>
+					</li>
+					<li class="disabled">ifin
+						<a href="#">Another action</a>
+					</li>
+					<li class="divider">
+					</li>
+					<li>
+						<a href="#">Something else here</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="btn-group">
+				 
+				<button class="btn btn-default">
+					Twitter
+				</button> 
+				<button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">Facebook</a>
+					</li>
+					<li class="disabled">
+						<a href="#">Another action</a>
+					</li>
+					<li class="divider">
+					</li>
+					<li>
+						<a href="#">Something else here</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="col-md-2">
+
+			<button type="button" class="btn btn-default" onclick = "getSearch()">
+				Search
+			</button>
+			<button type = "button" onclick = "getSearch()" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+
+		</div>
+		<div class="col-md-8">
+			<h3 class="text-center" style="color: black">
+				Finance
+			</h3>
+			<div  style="border: 2px solid black">
+				<img src="../documentation/finance_example.png" alt="Mountain View" style="width:100% ;height:25%;">
+				<p>
+				
+				</p>
+			</div>
+			
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6" id = "news_div2">
+			<h3 class="text-center" style="color: black">
+				News
+			</h3>
+			<div  style="border: 2px solid black; overflow: scroll; width: 100%; height: 500px " id = "news_div_add">
+				<p>
+				
+				</p>
+			</div>
+		</div>
+		<div class="col-md-6" >
+			<div>
+			<h3 class="text-center" style="color: black">
+				Social Media
+			</h3>
+			</div>
+			<div  style="border: 2px solid black; overflow: scroll; width: 100%; height: 500px" >
+				<img src="../documentation/twitter_example.png" alt="Mountain View" style="width:100% ;height:100%;">
+				<img src="../documentation/twitter_example.png" alt="Mountain View" style="width:100% ;height:100%;">
+				<img src="../documentation/twitter_example.png" alt="Mountain View" style="width:100% ;height:100%;">
+
+				<p>
+				
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

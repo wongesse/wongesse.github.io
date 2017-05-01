@@ -1,0 +1,1010 @@
+{
+"response": {
+"meta": {
+"hits": 36078,
+"time": 19,
+"offset": 0
+},
+"docs": [
+{
+"web_url": "https://www.nytimes.com/2017/04/21/technology/google-earth-voyager.html",
+"snippet": "Want to visit the places where Ernest Hemingway hung out? Google’s “interactive tours” allow users to explore parts unknown — without leaving their cubicles....",
+"lead_paragraph": "Want to visit the places where Ernest Hemingway hung out? Google’s “interactive tours” allow users to explore parts unknown — without leaving their cubicles.",
+"abstract": null,
+"print_page": 0,
+"blog": [],
+"source": "The New York Times",
+"multimedia": [
+{
+"width": 75,
+"url": "images/2017/04/21/technology/21voyager2_xp/21voyager2_xp-thumbStandard.jpg",
+"rank": 0,
+"height": 75,
+"subtype": "thumbnail",
+"legacy": {
+"thumbnailheight": 75,
+"thumbnail": "images/2017/04/21/technology/21voyager2_xp/21voyager2_xp-thumbStandard.jpg",
+"thumbnailwidth": 75
+},
+"type": "image"
+},
+{
+"width": 600,
+"url": "images/2017/04/21/technology/21voyager2_xp/21voyager2_xp-articleLarge.jpg",
+"rank": 0,
+"height": 489,
+"subtype": "xlarge",
+"legacy": {
+"xlargewidth": 600,
+"xlarge": "images/2017/04/21/technology/21voyager2_xp/21voyager2_xp-articleLarge.jpg",
+"xlargeheight": 489
+},
+"type": "image"
+},
+{
+"width": 190,
+"url": "images/2017/04/21/technology/21voyager2_xp/21voyager2_xp-thumbWide-v2.jpg",
+"rank": 0,
+"height": 126,
+"subtype": "wide",
+"legacy": {
+"wide": "images/2017/04/21/technology/21voyager2_xp/21voyager2_xp-thumbWide-v2.jpg",
+"widewidth": 190,
+"wideheight": 126
+},
+"type": "image"
+}
+],
+"headline": {
+"main": "Google Earth’s New Voyager Tool Aims to Feed Our Wanderlust",
+"print_headline": "Google Earth’s New Voyager Tool Aims to Feed Our Wanderlust"
+},
+"keywords": [
+{
+"isMajor": "N",
+"rank": 1,
+"name": "subject",
+"value": "Computers and the Internet"
+},
+{
+"isMajor": "N",
+"rank": 2,
+"name": "organizations",
+"value": "Google Inc"
+},
+{
+"isMajor": "N",
+"rank": 3,
+"name": "subject",
+"value": "Maps"
+},
+{
+"isMajor": "N",
+"rank": 4,
+"name": "subject",
+"value": "Travel and Vacations"
+},
+{
+"isMajor": "N",
+"rank": 5,
+"name": "subject",
+"value": "Geography"
+}
+],
+"pub_date": "2017-04-21T12:53:48+0000",
+"document_type": "article",
+"news_desk": "Business",
+"section_name": "Technology",
+"subsection_name": null,
+"byline": {
+"person": [
+{
+"organization": "",
+"role": "reported",
+"rank": 1,
+"firstname": "Matt",
+"lastname": "STEVENS"
+}
+],
+"original": "By MATT STEVENS"
+},
+"type_of_material": "News",
+"_id": "58fa00e37c459f24986db5d6",
+"word_count": 709,
+"slideshow_credits": null
+},
+{
+"web_url": "https://www.nytimes.com/2017/04/03/technology/google-training-ad-placement-computers-to-be-offended.html",
+"snippet": "It’s about context. Google engineers are trying to teach machines to recognize what can be offensive or inoffensive depending on the situation....",
+"lead_paragraph": "It’s about context. Google engineers are trying to teach machines to recognize what can be offensive or inoffensive depending on the situation.",
+"abstract": null,
+"print_page": 1,
+"blog": [],
+"source": "The New York Times",
+"multimedia": [
+{
+"width": 75,
+"url": "images/2017/04/02/business/03GOOGLE/03GOOGLE-thumbStandard.jpg",
+"rank": 0,
+"height": 75,
+"subtype": "thumbnail",
+"legacy": {
+"thumbnailheight": 75,
+"thumbnail": "images/2017/04/02/business/03GOOGLE/03GOOGLE-thumbStandard.jpg",
+"thumbnailwidth": 75
+},
+"type": "image"
+},
+{
+"width": 600,
+"url": "images/2017/04/02/business/03GOOGLE/03GOOGLE-articleLarge.jpg",
+"rank": 0,
+"height": 387,
+"subtype": "xlarge",
+"legacy": {
+"xlargewidth": 600,
+"xlarge": "images/2017/04/02/business/03GOOGLE/03GOOGLE-articleLarge.jpg",
+"xlargeheight": 387
+},
+"type": "image"
+},
+{
+"width": 190,
+"url": "images/2017/04/02/business/03GOOGLE/03GOOGLE-thumbWide.jpg",
+"rank": 0,
+"height": 126,
+"subtype": "wide",
+"legacy": {
+"wide": "images/2017/04/02/business/03GOOGLE/03GOOGLE-thumbWide.jpg",
+"widewidth": 190,
+"wideheight": 126
+},
+"type": "image"
+}
+],
+"headline": {
+"main": "Google Training Ad Placement Computers to Be Offended",
+"print_headline": "Google Trains Ad Computers to Be Offended"
+},
+"keywords": [
+{
+"isMajor": "N",
+"rank": 1,
+"name": "subject",
+"value": "Computers and the Internet"
+},
+{
+"isMajor": "N",
+"rank": 2,
+"name": "subject",
+"value": "Online Advertising"
+},
+{
+"isMajor": "N",
+"rank": 3,
+"name": "organizations",
+"value": "Google Inc"
+},
+{
+"isMajor": "N",
+"rank": 4,
+"name": "subject",
+"value": "Artificial Intelligence"
+},
+{
+"isMajor": "N",
+"rank": 5,
+"name": "persons",
+"value": "Schindler, Philipp"
+}
+],
+"pub_date": "2017-04-03T04:03:08+0000",
+"document_type": "article",
+"news_desk": "Business",
+"section_name": "Technology",
+"subsection_name": null,
+"byline": {
+"person": [
+{
+"organization": "",
+"role": "reported",
+"rank": 1,
+"firstname": "Daisuke",
+"lastname": "WAKABAYASHI"
+}
+],
+"original": "By DAISUKE WAKABAYASHI"
+},
+"type_of_material": "News",
+"_id": "58e1c9867c459f24986d7fe8",
+"word_count": 1175,
+"slideshow_credits": null
+},
+{
+"web_url": "https://www.nytimes.com/2017/04/25/technology/personaltech/website-security.html",
+"snippet": "Google and other browsers now point out when the website you are visiting isn’t using a secure connection to protect your information....",
+"lead_paragraph": "Google and other browsers now point out when the website you are visiting isn’t using a secure connection to protect your information.",
+"abstract": null,
+"print_page": 6,
+"blog": [],
+"source": "The New York Times",
+"multimedia": [],
+"headline": {
+"main": "Checking a Website’s Security",
+"kicker": "Tech Tip",
+"print_headline": "How to Make Sure A Website Is Secure",
+"content_kicker": "Tech Tip"
+},
+"keywords": [
+{
+"isMajor": "N",
+"rank": 1,
+"name": "subject",
+"value": "Computer Security"
+},
+{
+"isMajor": "N",
+"rank": 2,
+"name": "subject",
+"value": "Computers and the Internet"
+},
+{
+"isMajor": "N",
+"rank": 3,
+"name": "subject",
+"value": "Chrome (Browser)"
+},
+{
+"isMajor": "N",
+"rank": 4,
+"name": "subject",
+"value": "Web Browsers"
+},
+{
+"isMajor": "N",
+"rank": 5,
+"name": "subject",
+"value": "Privacy"
+},
+{
+"isMajor": "N",
+"rank": 6,
+"name": "organizations",
+"value": "Google Inc"
+},
+{
+"isMajor": "N",
+"rank": 7,
+"name": "organizations",
+"value": "Mozilla Foundation"
+}
+],
+"pub_date": "2017-04-25T16:08:48+0000",
+"document_type": "article",
+"news_desk": "Business",
+"section_name": "Technology",
+"subsection_name": "Personal Tech",
+"byline": {
+"person": [
+{
+"organization": "",
+"role": "reported",
+"rank": 1,
+"firstname": "J."
+}
+],
+"original": "By J. D. BIERSDORFER"
+},
+"type_of_material": "Question",
+"_id": "58ff749a7c459f24986dbfc3",
+"word_count": 346,
+"slideshow_credits": null
+},
+{
+"web_url": "https://www.nytimes.com/2017/04/03/technology/tech-roundup-googles-ad-issues-expose-a-vulnerability.html",
+"snippet": "Concern among big advertisers that their material is being shown next to YouTube videos posted by extremists shows that every system has its weaknesses....",
+"lead_paragraph": "Concern among big advertisers that their material is being shown next to YouTube videos posted by extremists shows that every system has its weaknesses.",
+"abstract": null,
+"print_page": 0,
+"blog": [],
+"source": "The New York Times",
+"multimedia": [
+{
+"width": 75,
+"url": "images/2017/04/02/business/03GOOGLE/03GOOGLE-thumbStandard.jpg",
+"rank": 0,
+"height": 75,
+"subtype": "thumbnail",
+"legacy": {
+"thumbnailheight": 75,
+"thumbnail": "images/2017/04/02/business/03GOOGLE/03GOOGLE-thumbStandard.jpg",
+"thumbnailwidth": 75
+},
+"type": "image"
+},
+{
+"width": 600,
+"url": "images/2017/04/02/business/03GOOGLE/03GOOGLE-articleLarge.jpg",
+"rank": 0,
+"height": 387,
+"subtype": "xlarge",
+"legacy": {
+"xlargewidth": 600,
+"xlarge": "images/2017/04/02/business/03GOOGLE/03GOOGLE-articleLarge.jpg",
+"xlargeheight": 387
+},
+"type": "image"
+},
+{
+"width": 190,
+"url": "images/2017/04/02/business/03GOOGLE/03GOOGLE-thumbWide.jpg",
+"rank": 0,
+"height": 126,
+"subtype": "wide",
+"legacy": {
+"wide": "images/2017/04/02/business/03GOOGLE/03GOOGLE-thumbWide.jpg",
+"widewidth": 190,
+"wideheight": 126
+},
+"type": "image"
+}
+],
+"headline": {
+"main": "Tech Roundup: Google’s Ad Issues Expose a Vulnerability",
+"kicker": "Bits",
+"print_headline": "Tech Roundup: Google’s Ad Issues Expose a Vulnerability",
+"content_kicker": "Bits"
+},
+"keywords": [
+{
+"isMajor": "N",
+"rank": 1,
+"name": "subject",
+"value": "Advertising and Marketing"
+},
+{
+"isMajor": "N",
+"rank": 2,
+"name": "organizations",
+"value": "Google Inc"
+},
+{
+"isMajor": "N",
+"rank": 3,
+"name": "organizations",
+"value": "YouTube.com"
+},
+{
+"isMajor": "N",
+"rank": 4,
+"name": "subject",
+"value": "Computers and the Internet"
+}
+],
+"pub_date": "2017-04-03T17:19:09+0000",
+"document_type": "article",
+"news_desk": "Business",
+"section_name": "Technology",
+"subsection_name": null,
+"byline": {
+"person": [
+{
+"organization": "",
+"role": "reported",
+"rank": 1,
+"firstname": "Jim",
+"lastname": "KERSTETTER"
+}
+],
+"original": "By JIM KERSTETTER"
+},
+"type_of_material": "News",
+"_id": "58e284237c459f24986d81cd",
+"word_count": 316,
+"slideshow_credits": null
+},
+{
+"web_url": "https://www.nytimes.com/video/technology/100000002905026/demo-of-google8217s-self-driving-car.html",
+"snippet": "The company has begun building a fleet of experimental electric-powered vehicles that can’t be driven by people and are summoned with a smartphone app....",
+"lead_paragraph": "The company has begun building a fleet of experimental electric-powered vehicles that can’t be driven by people and are summoned with a smartphone app.",
+"abstract": null,
+"print_page": null,
+"blog": [],
+"source": "The New York Times",
+"multimedia": [
+{
+"width": 190,
+"url": "images/2014/05/27/multimedia/google-car-handout/google-car-handout-thumbWide.jpg",
+"height": 126,
+"subtype": "wide",
+"legacy": {
+"wide": "images/2014/05/27/multimedia/google-car-handout/google-car-handout-thumbWide.jpg",
+"wideheight": "126",
+"widewidth": "190"
+},
+"type": "image"
+},
+{
+"width": 600,
+"url": "images/2014/05/27/multimedia/google-car-handout/google-car-handout-articleLarge.jpg",
+"height": 338,
+"subtype": "xlarge",
+"legacy": {
+"xlargewidth": "600",
+"xlarge": "images/2014/05/27/multimedia/google-car-handout/google-car-handout-articleLarge.jpg",
+"xlargeheight": "338"
+},
+"type": "image"
+},
+{
+"width": 75,
+"url": "images/2014/05/27/multimedia/google-car-handout/google-car-handout-thumbStandard.jpg",
+"height": 75,
+"subtype": "thumbnail",
+"legacy": {
+"thumbnailheight": "75",
+"thumbnail": "images/2014/05/27/multimedia/google-car-handout/google-car-handout-thumbStandard.jpg",
+"thumbnailwidth": "75"
+},
+"type": "image"
+}
+],
+"headline": {
+"main": "Google’s Video of Its Self-Driving Car"
+},
+"keywords": [
+{
+"rank": "1",
+"is_major": "N",
+"name": "organizations",
+"value": "Google Inc"
+},
+{
+"rank": "2",
+"is_major": "N",
+"name": "subject",
+"value": "Driverless and Semiautonomous Vehicles"
+}
+],
+"pub_date": "2014-05-27T22:03:52Z",
+"document_type": "multimedia",
+"news_desk": "Technology",
+"section_name": "Technology",
+"subsection_name": null,
+"byline": {
+"person": [
+{
+"organization": "",
+"role": "reported",
+"firstname": "Google",
+"rank": 1
+}
+],
+"original": "Google"
+},
+"type_of_material": "Video",
+"_id": "5385e79138f0d86295670f4f",
+"word_count": "24",
+"slideshow_credits": null
+},
+{
+"web_url": "https://www.nytimes.com/2014/11/09/books/review/how-google-works-by-eric-schmidt-and-jonathan-rosenberg.html",
+"snippet": "Two technology executives explain the business methods behind Google’s groundbreaking success....",
+"lead_paragraph": "Two technology executives explain the business methods behind Google’s groundbreaking success.",
+"abstract": "Brad Stone reviews book How Google Works by Eric Schmidt and Jonathan Rosenberg with Alan Eagle.",
+"print_page": "43",
+"blog": [],
+"source": "The New York Times",
+"multimedia": [
+{
+"subtype": "wide",
+"url": "images/2014/11/09/books/review/1109-bks-Stone/1109-bks-Stone-thumbWide.jpg",
+"height": 126,
+"width": 190,
+"legacy": {
+"wide": "images/2014/11/09/books/review/1109-bks-Stone/1109-bks-Stone-thumbWide.jpg",
+"wideheight": "126",
+"widewidth": "190"
+},
+"type": "image"
+},
+{
+"subtype": "xlarge",
+"url": "images/2014/11/09/books/review/1109-bks-Stone/1109-bks-Stone-articleLarge.jpg",
+"height": 1496,
+"width": 600,
+"legacy": {
+"xlargewidth": "600",
+"xlarge": "images/2014/11/09/books/review/1109-bks-Stone/1109-bks-Stone-articleLarge.jpg",
+"xlargeheight": "1496"
+},
+"type": "image"
+},
+{
+"subtype": "thumbnail",
+"url": "images/2014/11/09/books/review/1109-bks-Stone/1109-bks-Stone-thumbStandard.jpg",
+"height": 75,
+"width": 75,
+"legacy": {
+"thumbnailheight": "75",
+"thumbnail": "images/2014/11/09/books/review/1109-bks-Stone/1109-bks-Stone-thumbStandard.jpg",
+"thumbnailwidth": "75"
+},
+"type": "image"
+}
+],
+"headline": {
+"main": "‘How Google Works,’ by Eric Schmidt and Jonathan Rosenberg",
+"print_headline": "Information-Sharing"
+},
+"keywords": [
+{
+"value": "Books and Literature",
+"is_major": "Y",
+"rank": "1",
+"name": "subject"
+},
+{
+"value": "Schmidt, Eric E",
+"is_major": "Y",
+"rank": "2",
+"name": "persons"
+},
+{
+"value": "Rosenberg, Jonathan J",
+"is_major": "Y",
+"rank": "3",
+"name": "persons"
+},
+{
+"value": "Eagle, Alan",
+"is_major": "Y",
+"rank": "4",
+"name": "persons"
+},
+{
+"value": "Google Inc",
+"is_major": "N",
+"rank": "5",
+"name": "organizations"
+},
+{
+"value": "Computers and the Internet",
+"is_major": "N",
+"rank": "6",
+"name": "subject"
+},
+{
+"value": "How Google Works (Book)",
+"is_major": "Y",
+"rank": "7",
+"name": "creative_works"
+}
+],
+"pub_date": "2014-11-09T00:00:00Z",
+"document_type": "article",
+"news_desk": "BookReview",
+"section_name": "Books",
+"subsection_name": "Sunday Book Review",
+"byline": {
+"contributor": "",
+"person": [
+{
+"organization": "",
+"role": "reported",
+"rank": 1,
+"firstname": "Brad",
+"lastname": "STONE"
+}
+],
+"original": "By BRAD STONE"
+},
+"type_of_material": "Review",
+"_id": "545cf8c538f0d85e5ee91e6d",
+"word_count": "1255",
+"slideshow_credits": null
+},
+{
+"web_url": "https://www.nytimes.com/2017/03/14/technology/germany-hate-speech-facebook-tech.html",
+"snippet": "The minister of justice said he would introduce a law requiring penalties for tech companies that did not respond quickly enough to delete illegal posts....",
+"lead_paragraph": "The minister of justice said he would introduce a law requiring penalties for tech companies that did not respond quickly enough to delete illegal posts.",
+"abstract": null,
+"print_page": 2,
+"blog": [],
+"source": "The New York Times",
+"multimedia": [
+{
+"width": 75,
+"url": "images/2017/03/15/world/15Germanyhate/15Germanyhate-thumbStandard.jpg",
+"rank": 0,
+"height": 75,
+"subtype": "thumbnail",
+"legacy": {
+"thumbnailheight": 75,
+"thumbnail": "images/2017/03/15/world/15Germanyhate/15Germanyhate-thumbStandard.jpg",
+"thumbnailwidth": 75
+},
+"type": "image"
+},
+{
+"width": 600,
+"url": "images/2017/03/15/world/15Germanyhate/15Germanyhate-articleLarge.jpg",
+"rank": 0,
+"height": 400,
+"subtype": "xlarge",
+"legacy": {
+"xlargewidth": 600,
+"xlarge": "images/2017/03/15/world/15Germanyhate/15Germanyhate-articleLarge.jpg",
+"xlargeheight": 400
+},
+"type": "image"
+},
+{
+"width": 190,
+"url": "images/2017/03/15/world/15Germanyhate/15Germanyhate-thumbWide.jpg",
+"rank": 0,
+"height": 126,
+"subtype": "wide",
+"legacy": {
+"wide": "images/2017/03/15/world/15Germanyhate/15Germanyhate-thumbWide.jpg",
+"widewidth": 190,
+"wideheight": 126
+},
+"type": "image"
+}
+],
+"headline": {
+"main": "Facebook and Twitter Could Face Fines in Germany Over Hate Speech Posts",
+"print_headline": "Germany Threatens to Fine Facebook and Twitter Over Hate Speech"
+},
+"keywords": [
+{
+"isMajor": "N",
+"rank": 1,
+"name": "subject",
+"value": "Computers and the Internet"
+},
+{
+"isMajor": "N",
+"rank": 2,
+"name": "subject",
+"value": "Social Media"
+},
+{
+"isMajor": "N",
+"rank": 3,
+"name": "subject",
+"value": "Hate Crimes"
+},
+{
+"isMajor": "N",
+"rank": 4,
+"name": "organizations",
+"value": "Facebook Inc"
+},
+{
+"isMajor": "N",
+"rank": 5,
+"name": "organizations",
+"value": "Google Inc"
+},
+{
+"isMajor": "N",
+"rank": 6,
+"name": "organizations",
+"value": "Twitter"
+},
+{
+"isMajor": "N",
+"rank": 7,
+"name": "persons",
+"value": "Maas, Heiko (1966- )"
+},
+{
+"isMajor": "N",
+"rank": 8,
+"name": "glocations",
+"value": "Germany"
+},
+{
+"isMajor": "N",
+"rank": 9,
+"name": "subject",
+"value": "Fines (Penalties)"
+}
+],
+"pub_date": "2017-03-14T14:22:39+0000",
+"document_type": "article",
+"news_desk": "Business",
+"section_name": "Technology",
+"subsection_name": null,
+"byline": {
+"person": [
+{
+"organization": "",
+"role": "reported",
+"rank": 1,
+"firstname": "Melissa",
+"lastname": "EDDY"
+},
+{
+"organization": "",
+"role": "reported",
+"rank": 2,
+"firstname": "Mark",
+"lastname": "SCOTT"
+}
+],
+"original": "By MELISSA EDDY and MARK SCOTT"
+},
+"type_of_material": "News",
+"_id": "58c7fcb77c459f247805bb86",
+"word_count": 1027,
+"slideshow_credits": null
+},
+{
+"web_url": "https://www.nytimes.com/2017/02/23/technology/google-jigsaw-monitor-toxic-online-comments.html",
+"snippet": "Researchers at the incubator Jigsaw think machine learning can help publishers filter out readers’ offensive posts to keep the discourse civil....",
+"lead_paragraph": "Researchers at the incubator Jigsaw think machine learning can help publishers filter out readers’ offensive posts to keep the discourse civil.",
+"abstract": null,
+"print_page": 2,
+"blog": [],
+"source": "The New York Times",
+"multimedia": [
+{
+"width": 75,
+"url": "images/2017/02/24/business/24GOOGLE1/24GOOGLE1-thumbStandard.jpg",
+"rank": 0,
+"height": 75,
+"subtype": "thumbnail",
+"legacy": {
+"thumbnailheight": 75,
+"thumbnail": "images/2017/02/24/business/24GOOGLE1/24GOOGLE1-thumbStandard.jpg",
+"thumbnailwidth": 75
+},
+"type": "image"
+},
+{
+"width": 600,
+"url": "images/2017/02/24/business/24GOOGLE1/24GOOGLE1-articleLarge.jpg",
+"rank": 0,
+"height": 344,
+"subtype": "xlarge",
+"legacy": {
+"xlargewidth": 600,
+"xlarge": "images/2017/02/24/business/24GOOGLE1/24GOOGLE1-articleLarge.jpg",
+"xlargeheight": 344
+},
+"type": "image"
+},
+{
+"width": 190,
+"url": "images/2017/02/24/business/24GOOGLE1/24GOOGLE1-thumbWide.jpg",
+"rank": 0,
+"height": 126,
+"subtype": "wide",
+"legacy": {
+"wide": "images/2017/02/24/business/24GOOGLE1/24GOOGLE1-thumbWide.jpg",
+"widewidth": 190,
+"wideheight": 126
+},
+"type": "image"
+}
+],
+"headline": {
+"main": "Google Cousin Develops Technology to Flag Toxic Online Comments",
+"print_headline": "Developing Online Tools to Flag Toxic Comments"
+},
+"keywords": [
+{
+"isMajor": "N",
+"rank": 1,
+"name": "subject",
+"value": "Artificial Intelligence"
+},
+{
+"isMajor": "N",
+"rank": 2,
+"name": "subject",
+"value": "Computers and the Internet"
+},
+{
+"isMajor": "N",
+"rank": 3,
+"name": "organizations",
+"value": "Google Inc"
+},
+{
+"isMajor": "N",
+"rank": 4,
+"name": "subject",
+"value": "Social Media"
+},
+{
+"isMajor": "N",
+"rank": 5,
+"name": "organizations",
+"value": "Alphabet Inc"
+}
+],
+"pub_date": "2017-02-23T12:00:03+0000",
+"document_type": "article",
+"news_desk": "Business",
+"section_name": "Technology",
+"subsection_name": null,
+"byline": {
+"person": [
+{
+"organization": "",
+"role": "reported",
+"rank": 1,
+"firstname": "Daisuke",
+"lastname": "WAKABAYASHI"
+}
+],
+"original": "By DAISUKE WAKABAYASHI"
+},
+"type_of_material": "News",
+"_id": "58aecec87c459f2525d1e0ed",
+"word_count": 497,
+"slideshow_credits": null
+},
+{
+"web_url": "https://www.nytimes.com/2017/03/15/technology/personaltech/system-updates-background.html",
+"snippet": "If you want to see what else happened besides security patches and bug fixes when you installed that update, check the source....",
+"lead_paragraph": "If you want to see what else happened besides security patches and bug fixes when you installed that update, check the source.",
+"abstract": null,
+"print_page": 0,
+"blog": [],
+"source": "The New York Times",
+"multimedia": [],
+"headline": {
+"main": "Just What Was in That iOS System Update?",
+"kicker": "Tech Tip",
+"print_headline": "Just What Was in That iOS System Update?",
+"content_kicker": "Tech Tip"
+},
+"keywords": [
+{
+"isMajor": "N",
+"rank": 1,
+"name": "subject",
+"value": "Computers and the Internet"
+},
+{
+"isMajor": "N",
+"rank": 2,
+"name": "subject",
+"value": "Software"
+},
+{
+"isMajor": "N",
+"rank": 3,
+"name": "subject",
+"value": "iOS (Operating System)"
+},
+{
+"isMajor": "N",
+"rank": 4,
+"name": "subject",
+"value": "Android (Operating System)"
+},
+{
+"isMajor": "N",
+"rank": 5,
+"name": "subject",
+"value": "Windows (Operating System)"
+},
+{
+"isMajor": "N",
+"rank": 6,
+"name": "subject",
+"value": "Computer Security"
+},
+{
+"isMajor": "N",
+"rank": 7,
+"name": "organizations",
+"value": "Apple Inc"
+},
+{
+"isMajor": "N",
+"rank": 8,
+"name": "organizations",
+"value": "Google Inc"
+},
+{
+"isMajor": "N",
+"rank": 9,
+"name": "organizations",
+"value": "Microsoft Corp"
+}
+],
+"pub_date": "2017-03-15T15:36:06+0000",
+"document_type": "article",
+"news_desk": "Business",
+"section_name": "Technology",
+"subsection_name": "Personal Tech",
+"byline": {
+"person": [
+{
+"organization": "",
+"role": "reported",
+"rank": 1,
+"firstname": "J."
+}
+],
+"original": "By J. D. BIERSDORFER"
+},
+"type_of_material": "Question",
+"_id": "58c95f737c459f247805bf80",
+"word_count": 397,
+"slideshow_credits": null
+},
+{
+"web_url": "https://www.nytimes.com/2017/04/14/technology/personaltech/tracking-the-ticker-on-the-go.html",
+"snippet": "You can customize the information the Google app shows you, including the stocks you want to follow and other news that interests you....",
+"lead_paragraph": "You can customize the information the Google app shows you, including the stocks you want to follow and other news that interests you.",
+"abstract": null,
+"print_page": 0,
+"blog": [],
+"source": "The New York Times",
+"multimedia": [],
+"headline": {
+"main": "Tracking the Ticker on the Go",
+"kicker": "Tech Tip",
+"print_headline": "Tracking the Ticker on the Go",
+"content_kicker": "Tech Tip"
+},
+"keywords": [
+{
+"isMajor": "N",
+"rank": 1,
+"name": "subject",
+"value": "Mobile Applications"
+},
+{
+"isMajor": "N",
+"rank": 2,
+"name": "organizations",
+"value": "Google Inc"
+},
+{
+"isMajor": "N",
+"rank": 3,
+"name": "subject",
+"value": "Stocks and Bonds"
+},
+{
+"isMajor": "N",
+"rank": 4,
+"name": "subject",
+"value": "Android (Operating System)"
+}
+],
+"pub_date": "2017-04-14T14:26:42+0000",
+"document_type": "article",
+"news_desk": "Business",
+"section_name": "Technology",
+"subsection_name": "Personal Tech",
+"byline": {
+"person": [
+{
+"organization": "",
+"role": "reported",
+"rank": 1,
+"firstname": "J."
+}
+],
+"original": "By J. D. BIERSDORFER"
+},
+"type_of_material": "Question",
+"_id": "58f0dc2a7c459f24986da38f",
+"word_count": 311,
+"slideshow_credits": null
+}
+]
+},
+"status": "OK",
+"copyright": "Copyright (c) 2013 The New York Times Company.  All Rights Reserved."
+}
