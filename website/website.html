@@ -15,7 +15,52 @@
     <link href="css/style.css" rel="stylesheet">
 
 
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+      google.charts.load('current', {'packages': ['corechart']});
+
+      function drawChart(array) {
+        // Define the chart to be drawn.
+        var data = google.visualization.arrayToDataTable(array);
+
+      	var options = {
+      	  title: 'Previous Closing Values',
+      	  hAxis: {title: 'Date', titleTextStyle:{color: '#333'}},
+      	  vAxis: {minValue: 0}
+      	};
+
+        // Instantiate and draw the chart.
+        var chart = new google.visualization.ColumnChart(document.getElementById('stockChart'));
+        chart.draw(data, options);
+      }
+      function drawChart_default() {
+      // Define the chart to be drawn.
+      var data = google.visualization.arrayToDataTable([
+      ['Date', 'Open', 'High', 'Low', 'Close'],
+      ['2013', 1000, 400, 100, 250],
+      ['2014', 1170, 460, 200, 350],
+      ['2015', 660, 1120, 400, 410],
+      ['2016', 1030, 540, 200, 320]
+      ]);
+
+      var options = {
+      title: 'Previous Closing Values',
+      hAxis: {title: 'Year', titleTextStyle:{color: '#333'}},
+      vAxis: {minValue: 0}
+      };
+
+      // Instantiate and draw the chart.
+      var chart = new google.visualization.ColumnChart(document.getElementById('stockChart'));
+      chart.draw(data, options);
+      }
+    </script>
+
+
+
   </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
 <style>
 p.newyork{
   //border: 1px solid black;
@@ -36,25 +81,14 @@ p.stocks{
   font
 }
 
-div.twitter{
-  /*max-width: 500px;*/
-  width: 49%;
-  margin: auto;
-  border: 2px solid black;  
-  float: right; 
-.titleHeader {
-  background-color: yellow;
-}
-
-}
 </style>
 
 
-<body onload = "loadFunction()" background = "test-grey.jpg">
+<body onload = "loadFunction(); drawChart_default()" background = "images/test-grey.jpg">
 
   <div class="container-fluid">
   <div class="row">
-    <div class="col-md-12" style = "background-image: url('../documentation/background.jpg'); width: 100%; height: 100%;">
+    <div class="col-md-12" style = "background-image: url('images/background.jpg'); width: 100%; height: 100%;">
       <h1 class="text-center" style="color: black; font-size: 90px;">
         Stock 'n Stuff
       </h1>
@@ -65,54 +99,19 @@ div.twitter{
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Brand</a>
+        
+        <a class="navbar-brand" href="#">Stock n' Stuff</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
+          <li>
+            <a href="website.html">Home</a>
           </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
+          <li>
+            <a href="aboutPage.html">About</a>
+          </li>      
         </ul>
         
         <ul class="nav navbar-nav navbar-right">
@@ -131,67 +130,70 @@ div.twitter{
   <div class="row">
  
     <div class="col-md-12">
-      <h3 class="text-center" style="color: black" id = "stockname">
+      <h2 class="text-center" style="color: black" id = "stockname">
         Finance
-      </h3>
-      <div  style="border: 2px solid black; width: 100%; height: 100px ">
+      </h2>
+      <div  style="border-style: solid solid hidden solid; width: 100%; height: 100% ">
        <div class="row">
-		<div class="col-md-12">
-			<table class="table table-striped table-hover" style="background-color: white">
-				<thead>
-					<tr>
-						<th>
-							Type
-						</th>
-						<th>
-							Value
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							Open
-						</td>
-						<td id = "open">
-							0
-						</td>
-					</tr>
-					<tr class="active">
-						<td>
-							High
-						</td>
-						<td id = "high">
-							0
-						</td>
-					</tr>
-					<tr class="success">
-						<td>
-							Low
-						</td>
-						<td id = "low">
-							0
-						</td>
-					</tr>
-					<tr class="warning">
-						<td>
-							Close
-						</td>
-						<td id = "close">
-							0
-						</td>
-					</tr>
-					<tr class="danger">
-						<td>
-							Ex-Dividend
-						</td>
-						<td id = "ex-dividend">
-							0
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+    		<div class="col-md-4">
+    			<table class="table table-striped table-hover" style="background-color: white">
+    				<thead>
+    					<tr>
+    						<th>
+    							Type
+    						</th>
+    						<th>
+    							Value
+    						</th>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<tr class = "primary">
+    						<td>
+    							Open
+    						</td>
+    						<td id = "open">
+    							0
+    						</td>
+    					</tr>
+    					<tr class="danger">
+    						<td>
+    							High
+    						</td>
+    						<td id = "high">
+    							0
+    						</td>
+    					</tr>
+    					<tr class="warning">
+    						<td>
+    							Low
+    						</td>
+    						<td id = "low">
+    							0
+    						</td>
+    					</tr>
+    					<tr class="success">
+    						<td>
+    							Close
+    						</td>
+    						<td id = "close">
+    							0
+    						</td>
+    					</tr>
+    					<!-- <tr class="danger">
+    						<td>
+    							Ex-Dividend
+    						</td>
+    						<td id = "ex-dividend">
+    							0
+    						</td>
+    					</tr> -->
+    				</tbody>
+    			</table>
+    		</div>
+    		<div class = "col-md-8">
+    			<div id="stockChart" style="width: 100%; height: 100%;"></div>
+    		</div>
 	</div>
       
       </div>
@@ -201,9 +203,9 @@ div.twitter{
   </div>
   <div class="row">
     <div class="col-md-6" id = "news_div2">
-      <h3 class="text-center" style="color: black">
+      <h2 class="text-center" style="color: black">
         News
-      </h3>
+      </h2>
       <div  style="border: 2px solid black; overflow: scroll; width: 100%; height: 500px; background-color: white " id = "news_div_add">
         <p>
         
@@ -212,17 +214,17 @@ div.twitter{
     </div>
     <div class="col-md-6" >
       <div>
-      <h3 class="text-center" style="color: black">
+      <h2 class="text-center" style="color: black">
         Social Media
-       </h3>
+       </h2>
 
       </div>
       <div  id= "social_div_add" style= "float:left; width: 50%">
 		    <a class="twitter-timeline" data-height= "500px" data-width= "100%" data-widget-id="857669584266162176" data-screen-name= "google">Tweets by @Google</a>
       </div>
       <div style= "margin-left: 60%; height: 500px; width: 50%">
-		      <a id= "twitter" href="https://twitter.com/hashtag/google" target= "_blank"><img src= "twitter-hashtag.png" style="height:50%;"/></a>
-		      <a id= "facebook" href="https://www.facebook.com/search/top/?q=google" target="_blank"><img src= "facebook-logo.png" style="height:50%;"/></a>
+		      <a id= "twitter" href="https://twitter.com/hashtag/google" target= "_blank"><img src= "images/twitter-hashtag.png" style="height:50%;"/></a>
+		      <a id= "facebook" href="https://www.facebook.com/search/top/?q=google" target="_blank"><img src= "images/facebook-logo.png" style="height:50%;"/></a>
       </div>
 
     </div>
@@ -252,7 +254,6 @@ div.twitter{
 
   var d = new Date();
       d.setDate(d.getDate()-5); 
-      console.log(d);
       var year = d.getFullYear();
       var month = d.getMonth();
       var day = d.getDate();  
@@ -269,8 +270,6 @@ div.twitter{
         day = day.toString();
       }
       var bd = year + month + day;
-      console.log(bd);
-
 
     var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
     url += '?' + $.param({
@@ -278,14 +277,10 @@ div.twitter{
       'q': company_name, //possibly add quotes around variable
       'begin_date' : bd //same
     });
-    console.log(url);
     var info_Json = $.ajax({
       datatype: 'application/json',
       url: url,
       method: 'GET',
-      /*success: fun1()
-
-      }*/
     });
 
 
@@ -303,6 +298,68 @@ div.twitter{
     })
   }
 </script>
+
+<script>
+function chartValues(company_tag) {
+  var d = new Date();
+      d.setDate(d.getDate()-5); 
+      var year = d.getFullYear();
+      var month = d.getMonth();
+      var day = d.getDate();  
+      if(month + 1 < 10){
+        month = "0" + (month + 1).toString();
+      }
+      else{
+        month = (month + 1).toString();
+      }
+      if(day < 10){
+        day = "0" + day.toString();
+      }
+      else{
+        day = day.toString();
+      }
+      var bd = year + "-" + month +"-"+ day;
+
+  var url = "https://www.quandl.com/api/v3/datasets/WIKI/"+company_tag+".json?limit=5&start_date=" + bd;
+  url += $.param({
+       'api_key': "h4TiiYqPZjHKuYk3bzo5",
+  });
+
+  var stock_Json = $.ajax({
+      datatype: 'application/json',
+      url: url,
+      method: 'GET',
+  });
+  
+
+  stock_Json.done(function(result){
+    var array = new Array(Number(result.dataset.data.length)+1);
+
+    for(var i = 0; i < array.length; ++i) {
+      array[i] = new Array(5); // Pair for date, value
+    }
+    array[0][0] = 'Date';
+    array[0][1] = 'Opening Value';
+    array[0][2] = 'High Value';
+    array[0][3] = 'Low Value';    
+    array[0][4] = 'Closing Value';
+
+    for(var i = 1; i < array.length; ++i) {
+       var date = JSON.stringify(result.dataset.data[i-1][0]);
+       var parseddate = date.match(/"(.*?)"/);
+       array[i][0] = parseddate[1];
+       array[i][1] = Number(result.dataset.data[i-1][1]);
+       array[i][2] = Number(result.dataset.data[i-1][2]);
+       array[i][3] = Number(result.dataset.data[i-1][3]);       
+       array[i][4] = Number(result.dataset.data[i-1][4]);
+    }
+    drawChart(array);
+  });
+}
+</script>
+
+
+
 <script>
 // Similar to above, but for stocks
   function stockSearch() {
@@ -317,29 +374,10 @@ div.twitter{
         method: 'GET',
         async: false,
      }).done(function(result) {
-        console.log(JSON.stringify(result.ResultSet.Result[0].symbol));
         tag = JSON.stringify(result.ResultSet.Result[0].symbol);
      }).fail(function(err){
         alert("failure");
      }); 
-
-    /*var myInit = { method: 'GET',
-
-      datatype: 'application/jsonp',
-      mode: 'cors',
-      headers: {
-        "Accept": "application/jsonp"
-      }
-    };
-
-    var request = new Request(compurl, myInit);
-    var company_tag;
-    fetch(request).then(function(response){
-      response.json().then(function(json){
-        console.log(JSON.stringify(json.ResultSet.Result[0].symbol));
-        company_tag = JSON.stringify(json.ResultSet.Result[0].symbol);
-      });
-    });*/
      
     var parsedtag = tag.match(/"(.*?)"/);
     //alert(parsedtag[1]);
@@ -352,9 +390,6 @@ div.twitter{
       datatype: 'application/json',
       url: stockurl,
       method: 'GET',
-    }).done(function(result) {
-      console.log(result)
-      //alert(JSON.stringify(result.dataset.dataset_code))
     });
 
 // Date: 0
@@ -395,12 +430,8 @@ div.twitter{
       $('#close').append('<p class = "stocks">'
       + JSON.stringify(result.dataset.data[0][4]))
       +'</p>';
-      $('#ex-dividend').empty();
-      $('#ex-dividend').append('<p class = "stocks">'
-      + JSON.stringify(result.dataset.data[0][6]))
-      +'</p>';
       //alert(JSON.stringify(result.dataset.name));
-
+      chartValues(parsedtag[1]);
 // <p> string </p>
 
   })
@@ -432,16 +463,6 @@ div.twitter{
       datatype: 'application/json',
       url: url,
       method: 'GET',
-      /*success: fun1()
-
-      }*/
-    }).done(function(result) {
-      console.log(result)
-      //alert(JSON.stringify(result.response.docs[0].web_url))
-    }).fail(function(err) {
-      throw err;
-    
-
     });
 
     
