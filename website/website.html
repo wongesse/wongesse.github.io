@@ -315,7 +315,7 @@ div.twitter{
         datatype: 'application/jsonp',
         url: compurl,
         method: 'GET',
-        async: false,
+        //async: false,
      }).done(function(result) {
         console.log(JSON.stringify(result.ResultSet.Result[0].symbol));
         tag = JSON.stringify(result.ResultSet.Result[0].symbol);
