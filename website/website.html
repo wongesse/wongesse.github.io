@@ -376,7 +376,7 @@ function chartValues(company_tag) {
      }).done(function(result) {
         tag = JSON.stringify(result.ResultSet.Result[0].symbol);
      }).fail(function(err){
-        alert("failure");
+        //alert("failure");
      }); 
      
     var parsedtag = tag.match(/"(.*?)"/);
